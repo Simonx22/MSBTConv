@@ -30,8 +30,6 @@ namespace MSBTConv
             }
 
             Dictionary<string, string> msbt = LoadMsbt(args[0]);
-            // Console.WriteLine(msbt);
-            // var path = (args[0]);
             var path = Path.ChangeExtension((args[0]), ".json");
             File.WriteAllText(path, JsonConvert.SerializeObject(msbt));
         }
